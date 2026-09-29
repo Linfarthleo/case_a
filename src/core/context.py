@@ -1,0 +1,6 @@
+"""Per-request correlation identifiers, propagated through contextvars."""
+
+from contextvars import ContextVar
+
+request_id_var: ContextVar[str | None] = ContextVar("request_id", default=None)
+correlation_id_var: ContextVar[str | None] = ContextVar("correlation_id", default=None)
