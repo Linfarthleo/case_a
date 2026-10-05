@@ -187,29 +187,20 @@ Referencia de niveles por criterio (pregunta → JR / SSR / SR). Estas etiquetas
 | Incidente de datos y evaluaciones | Contención básica | Dataset de regresión y canary | Gobierno de incidentes y gates |
 | Cloud-native y gobierno | Rotación de secretos | Tracing y contratos | Plataforma de releases y supply chain |
 
-**Nota final** = 20 % × (% teórica) + 80 % × (% práctica), redondeada. Ejemplo: teórica 18/20 (90 %) y práctica 63/100 → 0,2×90 + 0,8×63 = 68 %. Si falta la teórica, no calcules la nota final: deja "pendiente". Si la hoja trae otra nota final, avísame.
+**Nota final** (escala /10, como en la hoja) = 15 % × teórica/10 + 85 % × práctica/10. Ejemplo: teórica 12/20 (6,0) y práctica 4,875/10 → 0,15×6 + 0,85×4,875 = 5,04. La hoja también trae "Nota final (solo práctica)". Usa los valores de la hoja; si no cuadran con tu cálculo, avísame.
 
-**Tabla de clasificación oficial** (sobre la nota final, de 0 a 100):
+**Tabla de clasificación oficial** (solo niveles principales, sobre 100):
 
 | Desde (≥) | Hasta (<) | Clasificación |
 |---|---|---|
-| 0 | 50 | NO APROBADO |
-| 50 | 55 | Especialista IA - Novato |
-| 55 | 60 | Especialista IA - Principiante |
-| 60 | 63 | Especialista IA - Competente |
-| 63 | 67 | Especialista IA - Proficiente |
-| 67 | 70 | Especialista IA - Avanzado |
-| 70 | 73 | Ingeniero IA - Novato |
-| 73 | 76 | Ingeniero IA - Principiante |
-| 76 | 79 | Ingeniero IA - Competente |
-| 79 | 81 | Ingeniero IA - Proficiente |
-| 81 | 85 | Ingeniero IA - Avanzado |
-| 85 | 100 | Ingeniero IA SR |
+| 0 | 50 | No aprobado |
+| 50 | 70 | Especialista Software IA |
+| 70 | 85 | Ingeniero Software IA |
+| 85 | 100 | Ingeniero Software IA SR |
 
-Equivale a esta fórmula de Excel (AM4 = nota final):
-`=SI(AM4<50;"NO APROBADO";SI(AM4<55;"Especialista IA - Novato";SI(AM4<60;"Especialista IA - principiante";SI(AM4<63;"Especialista IA - Competente";SI(AM4<67;"Especialista IA - Proficiente";SI(AM4<70;"Especialista IA - Avanzado";SI(AM4<73;"Ingeniero IA - Novato";SI(AM4<76;"Ingeniero IA - principiante";SI(AM4<79;"Ingeniero IA - Competente";SI(AM4<81;"Ingeniero IA - Proficiente";SI(AM4<85;"Ingeniero IA - Avanzado";"Ingeniero IA SR")))))))))))`
+La clasificación del informe es la "Categoría Evaluación" de la hoja. Si la hoja dice NO APROBADO (por ejemplo, porque reprobó la práctica o la teórica), el informe dice NO APROBADO aunque la nota final caiga en otro rango; explica en el texto el motivo (pruebas reprobadas) para que no haya contradicción, y avísame en el chat.
 
-Los límites son estrictos: 63 es "Proficiente", no "Competente". Si la clasificación de la hoja no coincide con esta tabla, avísame.
+**Nombres de criterios en la hoja actual:** "Generación del Código (/6)" en lugar de "Calidad del código", y "Decisiones de Código e IA (/8)". La hoja trae además "CV (años)", "Clasificación CV", varios evaluadores y observaciones por bloque: úsalos. La "X" de nivel de experiencia se marca según la "Clasificación CV".
 
 ## 9. Formato de tu análisis en el chat
 
@@ -258,15 +249,15 @@ Genera el informe editando la plantilla `Informe_entrevista_-_Feedback.docx` (de
 
 ### Estructura
 
-1. **Cabecera:** Versión 1.0 · Candidato · Email · Teléfono · Día de entrevista · Hora · Proceso realizado por · Documento realizado por (evaluador) · Aceptado (SI/NO). Datos faltantes: `[Por completar]` (teléfono y hora: "No registrado/a"). Nunca inventes datos. "Aceptado": NO APROBADO → "NO" en rojo; cualquier otra clasificación → "SI" en verde. Avísame para que lo confirme.
-2. **Tabla de clasificación:** en la plantilla es una imagen; reemplázala por una tabla real con la escala de la sección 8 (Desde | Hasta | Clasificación), con colores por grupo: NO APROBADO en rojo, Especialista IA en naranja/amarillo, Ingeniero IA en verde claro y Ingeniero IA SR en verde.
-3. **Resultado final:** `<CLASIFICACIÓN> – <nota final> %` (por ejemplo "ESPECIALISTA IA - AVANZADO – 68 %" o "NO APROBADO – 33 %"). Sin teórica: "Práctica X/100 – nota final pendiente".
-4. **Nivel de experiencia:** una "X" en Student, Junior, Semi-Senior o Senior. Correspondencia sugerida (confírmala conmigo): NO APROBADO → Student; Especialista IA → Junior; Ingeniero IA (Novato a Avanzado) → Semi-Senior; Ingeniero IA SR → Senior.
+1. **Cabecera:** Versión 1.0 · Candidato · Email · Teléfono · Día de entrevista · Hora · Proceso realizado por · Documento realizado por (evaluador) · Aceptado (SI/NO). Datos faltantes: `[Por completar]` (teléfono y hora: "No registrado/a"). Nunca inventes datos. "Aceptado": No aprobado → "NO" en rojo; cualquier otra clasificación → "SI" en verde. Avísame para que lo confirme.
+2. **Tabla de clasificación:** en la plantilla es una imagen; reemplázala por una tabla real con los 4 niveles de la sección 8 (Desde | Hasta | Clasificación): No aprobado en rojo, Especialista Software IA en amarillo, Ingeniero Software IA en verde claro e Ingeniero Software IA SR en verde.
+3. **Resultado final:** la "Categoría Evaluación" de la hoja (por ejemplo "NO APROBADO" o "ESPECIALISTA SOFTWARE IA"). La nota final va en la tabla de resumen de puntajes.
+4. **Nivel de experiencia:** una "X" en Student, Junior, Semi-Senior o Senior según la "Clasificación CV" de la hoja.
 5. **Observaciones Generales** (empieza en página nueva), en este orden:
    - 2 párrafos de resumen: reto, puntajes obtenidos y hallazgos principales (sin etiqueta de nivel).
    - **Perfil del candidato:** experiencia, stack, forma de trabajar.
    - **Habilidades blandas** (si aplica, con ejemplos concretos de la entrevista).
-   - **Resumen de puntajes:** tabla Componente | Puntaje | Cumplimiento (%); filas Teórica, Diseño, Implementación, Defensa, Total práctica, Nota final. Sin columna de nivel.
+   - **Resumen de puntajes:** tabla Componente | Puntaje | Equivalente /10; filas Teórica, Diseño, Implementación, Defensa, Total práctica, Nota final. Sin columna de nivel.
    - **Detalle de la prueba práctica:** tabla Bloque | Criterio | Puntaje con los 15 criterios y subtotales; celdas de bloque combinadas.
    - **Evaluación teórica**, **Diseño**, **Implementación**, **Defensa**: un párrafo por criterio que empiece con el criterio y el puntaje en negrita, p. ej. "**Uso de capas (4/6).** …", y que justifique ese puntaje.
 6. **Recomendación:** 2 párrafos: si se recomienda avanzar en el proceso y por qué (con evidencia, sin repetir la clasificación) y en qué temas concretos necesita acompañamiento.
