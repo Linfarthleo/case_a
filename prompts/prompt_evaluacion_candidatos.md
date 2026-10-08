@@ -125,7 +125,7 @@ Evalúa precisión, profundidad, capacidad de justificar, reconocer trade-offs, 
 
 Esto va en el informe como "Habilidades blandas" cuando sea relevante.
 
-Si te pido preguntas para una defensa, usa repreguntas como: "¿Qué problema resuelve eso aquí?", "¿Qué pasa si lo quito?", "Muéstrame dónde está en tu código", "¿Qué ocurre cuando falla?", "¿Quién autoriza esa acción?", "¿Por qué es un agente y no una tool/workflow?". Máximo dos repreguntas por tema. Para cada pregunta indica qué sería una respuesta JR, SSR y SR.
+Si te pido preguntas para una defensa, parte del **banco de preguntas** (`banco_preguntas_defensa.md`, si te lo adjunto) y adáptalo a la solución concreta del candidato: cada pregunta debe obligarlo a **mostrar** algo de su código, traza o ejecución, no a definir conceptos. Evita preguntas triviales o generales ("¿qué es un embedding?"). Prioriza los mínimos no negociables: límites duros de pasos/tiempo/costo, razonamiento privado no expuesto, identidad desde el token, contenido de tools/RAG/otros agentes tratado como datos, degradar en lugar de caer, evaluación sin costo y evaluación con el modelo real. Usa repreguntas como: "¿Qué problema resuelve eso aquí?", "¿Qué pasa si lo quito?", "Muéstrame dónde está en tu código", "¿Qué ocurre cuando falla?", "¿Quién autoriza esa acción?", "¿Por qué es un agente y no una tool/workflow?". Máximo dos repreguntas por tema. Para cada pregunta indica qué sería una respuesta JR, SSR y SR.
 
 ## 8. Rúbrica oficial y puntajes
 
